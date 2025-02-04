@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Karla:ital,wght@0,200..800;1,200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+} 
+
+body{
+    font-family: "Space Mono", serif;
+    font-weight: 400;
+    background-color: rgb(197, 228, 231);
+}
+input{
+    outline: none;
+}
+.img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+}
+.logo{
+    width: 60px;
+}    
+.conteiner{
+    display: flex;
+    justify-content: center;
+}
+.calculador{
+    max-width: 1000px;
+    width: 100%;
+    flex-wrap: wrap;
+    background-color: white;
+    border-radius: 20px;
+    display: flex; 
+    margin: 0 auto;
+    padding: 20px;  
+    justify-content: space-between; 
+}
+.infos{
+    width: 50%;
+    display:flex;
+    align-items:flex-start;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px;
+    gap:25px;
+}
+
+.bill, .people{
+    width: 100%;
+    font-size: 15px;
+    font-weight:700;
+    font-family:"Space Mono", serif; 
+    color:rgb(127, 156, 159);
+}
+.tip{
+    font-size: 15px;
+    font-weight:700;
+    font-family:"Space Mono", serif; 
+    color:rgb(127, 156, 159);
+}
+.result{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    width:40%;
+    background-color:rgb(0, 73, 77);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+    margin:35px;
+}
+
+.element-result{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.element-result-number{ 
+    flex-direction: column;
+    width: 100%;
+}
+.small{
+    color:rgba(211, 208, 208, 0.562);
+}
+.numberResult{
+    display: flex;
+    justify-content: end;
+    color:rgb(38, 192, 171);
+    font-size: 40px;
+    font-weight: 700;
+}
+.number-alert{
+    display: flex;
+    justify-content: space-between;
+}
+.error-in{
+    border: 1px solid red !important;
+}
+.alert {
+    display: none;
+    justify-content: end;
+    color: red;
+    font-size: 15px;
+}
+.button-percent{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.percent{
+    padding: 12px;
+    width: 30%;
+    margin: 5px;
+    border: none;
+    background-color:rgb(0, 73, 77);
+    color:white;
+    border-radius:5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: "Space Mono", serif;
+    font-weight: 800;
+    font-size: 20px;
+}
+.percent:hover {
+    background-color:rgb(38, 192, 171);
+    color: rgb(0, 73, 77);
+}
+.select{
+    background-color:rgb(38, 192, 171);
+}
+
+.customPercent{
+    width: 30%;
+    margin: 5px;
+    padding-left: 20px;
+    box-sizing: border-box;
+    background:rgb(197, 228, 231);
+    color:rgb(0, 73, 77);
+    font-family: "Space Mono", serif;
+    font-size: 20px;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+}
+.customPercent:hover{
+    border-width: 3px;
+    border-color: rgb(0, 73, 77);  
+}
+.customPercent:focus{
+    border: 1px solid rgb(38, 192, 171);
+}
+
+.bill input, .people input{
+    width:100%;
+    border: 1px;
+    background-color:rgba(176, 178, 179, 0.445);
+    border-radius:3px;
+
+    font-size: 22px;
+    font-weight: bold;
+    padding: 10px;
+    text-align: right;
+    font-family: "Space Mono", serif;
+}
+
+.bill input:focus,.people input:focus{
+    border: 1px solid rgb(38, 192, 171);
+}
+
+.error{
+    display: none;
+}
+.reset{
+    font-family: "Space Mono", serif;
+    font-weight:900;
+    font-size: 20px;
+    margin: 0 auto;
+    border: none;
+    background-color:rgb(38, 192, 171);
+    color:rgb(0, 73, 77);
+    width:95%;
+    padding:8px;
+    border-radius:5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.reset:hover {
+    background-color: rgb(197, 228, 231);
+}
+
+.input-icon {
+    flex-wrap: wrap;
+    position: absolute;
+    margin-top:35px;
+    margin-left: 20px;
+    pointer-events: none; 
+    width:15px;
+  }
+  .input-icon-people {
+    flex-wrap: wrap;
+    position: absolute;
+    margin-top:20px;
+    margin-left: 20px;
+    width:15px;
+  }
+
+@media(max-width:768px){
+
+    .calculador{
+        flex-wrap: wrap;
+    }
+    .infos{
+        width: 100%;
+        padding:0;
+        padding-bottom: 25px;;
+    }
+    .result{
+        width: 100%;
+        margin:25px 5px;
+        padding: 20px;
+
+    }
+    .element-result{
+        margin-bottom: 25px;;
+    }
+    .input-icon { 
+        margin-top:40px;
+        width:10px;
+      }
+      .input-icon-people {
+        margin-top:20px;
+        width:10px;
+      }
+}
+
+

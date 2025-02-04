@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <script src="./scripts.js" defer ></script>
+</head>
+<body>
+  <div class="img">
+    <img class="logo" src="assets/logo.svg" alt="logo">
+  </div>
+  <div class="container">
+    <div class="calculador">
+      <div class="infos">
+          <div class="bill"> 
+            <img src="assets/icon-dollar.svg" alt="IconDolar" class="input-icon">
+            <label>Bill <input min="0" type="number" id="bill" placeholder="0" /></label>
+          </div>
+          <div class="tip">
+            <p> Select Tip %</p>
+            <div class="button-percent">
+              <button  onclick="getPercentTip(5)" class="percent">5%</button>
+              <button  onclick="getPercentTip(10)" class="percent">10%</button>
+              <button  onclick="getPercentTip(15)"class="percent">15%</button>
+              <button  onclick="getPercentTip(25)" class="percent">25%</button>
+              <button  onclick="getPercentTip(50)"class="percent">50%</button>
+              <input class="customPercent"  type="number" id= "customPercent" placeholder="Custom"/>
+            </div>  
+          </div>
+          <div class="people">
+            <div class="number-alert">
+              <p> Number of People </p>
+              <div class="alert" id="alertMsg">Can't be zero</div>
+            </div>
+            <img src="assets/icon-person.svg" alt="IconPeople" class="input-icon-people">
+            <input min="1" type="number" id="numberPeople" class="a" placeholder="0">
+          </div>
+        </div>
+        <div class="result">
+          <div class="element-result">
+            <div class="tip-amount-person">
+              <p class="write-result" > Tip Amount</p>
+              <div class="small"><small>/ person</small></div>
+            </div>
+            <span class="numberResult" id="tipAmount">$0.00</span>
+          </div> 
+          <div class="element-result">
+            <div class="tip-amount-person">
+              <p class="write-result" > Total</p> 
+              <div class="small"><small>/ person</small></div>  
+            </div>
+            <span class="numberResult" id="total">$0.00</span>
+          </div> 
+          <button class="reset" type="reset"> RESET </button>
+        </div>
+    </div>
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+ 
